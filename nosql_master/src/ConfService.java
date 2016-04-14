@@ -22,6 +22,8 @@ public class ConfService {
 	private boolean isSlave1 = false;
 	private boolean isSlave2 = false;
 	
+	private boolean isAP = true;
+	private boolean isCP = false;
 	
 	
 	private String currentIP = "";
@@ -84,6 +86,18 @@ public class ConfService {
 				current_internal_port = getSlave2_internal_port();
 				current_external_port = getSlave2_external_port();
 			}
+			
+			String cp = (String) props.get("CAP_configuration"); 
+			if( cp != null && cp.equalsIgnoreCase("CP")) {
+				isCP = true;
+				isAP = false;
+			}
+			
+			String ap = (String) props.get("CAP_configuration"); 
+			if( ap != null && ap.equalsIgnoreCase("AP")) {
+				isCP = false;
+				isAP = true;
+			}
 
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
@@ -104,6 +118,15 @@ public class ConfService {
 		return isMaster;
 	}
 
+	public boolean isAP() {
+		return isAP;
+	}
+
+	public boolean isCP() {
+		return isCP;
+	}
+
+	
 	public String getMaster_ip() {
 		return master_ip;
 	}

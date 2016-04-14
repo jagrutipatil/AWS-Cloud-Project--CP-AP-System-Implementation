@@ -30,7 +30,17 @@ public class NodeHelper {
 		
 //	public static final boolean isMaster = true;
 	
-//	public static final String MASTER_IP = "52.24.88.230";
+	public static final String NODE_IP = "_NodeIP";
+	public static final String VERSION = "_Version";
+	public static final String ACTION = "_Action";
+	public static final String STATUS = "_Status";
+	public static final String KEY = "Key";
+	public static final String VALUE = "Value";
+	
+	public static final String RESTLET = "restlet";
+	public static final String TEST = "test";
+	
+	
 //	public static final int MASTER_EXTERNAL_PORT = 80;
 //	public static final int MASTER_INTERNAL_PORT = 8080;
 //	
