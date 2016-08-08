@@ -5,8 +5,6 @@
 <li> Technologies: Java, AWS, EC2 Instances.</li>
 </ul>
 
-<b>Setup:</b>
-
 <br><b>Configuration:</b></br><p>
   CAP_configuration=AP
   <p>#CAP_configuration=AP </p>
